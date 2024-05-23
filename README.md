@@ -11,6 +11,8 @@ https://www.mostlypython.com/django-from-first-principles-2/
 
 Para entrar no console interativo do projeto no Django 
 
+```
+
 ~/blogmaker_project$ python manage.py shell 
 
 Python 3.10.12 (main, Nov 20 2023, 15:14:05) [GCC 11.4.0] on linux
@@ -75,3 +77,5 @@ dict_keys(['_state', 'id', 'title', 'body', 'blog_id', 'date_added'])
 
 >>> str(posts.query)
 'SELECT "blogs_blogpost"."id", "blogs_blogpost"."title", "blogs_blogpost"."body", "blogs_blogpost"."blog_id", "blogs_blogpost"."date_added" FROM "blogs_blogpost" WHERE "blogs_blogpost"."blog_id" = 2 ORDER BY "blogs_blogpost"."date_added" DESC LIMIT 5'
+
+```
