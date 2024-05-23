@@ -12,7 +12,6 @@ https://www.mostlypython.com/django-from-first-principles-2/
 Para entrar no console interativo do projeto no Django 
 
 ```
-
 ~/blogmaker_project$ python manage.py shell 
 
 Python 3.10.12 (main, Nov 20 2023, 15:14:05) [GCC 11.4.0] on linux
