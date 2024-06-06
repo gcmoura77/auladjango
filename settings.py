@@ -1,3 +1,4 @@
+
 from pathlib import Path
 
 ROOT_URLCONF="blogmaker_lite"
@@ -47,3 +48,4 @@ STATIC_URL="static/"
 STATICFILES_DIRS = [
     "css",
 ]
+STATIC_ROOT = "staticfiles/"
