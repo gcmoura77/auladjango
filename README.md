@@ -78,3 +78,6 @@ dict_keys(['_state', 'id', 'title', 'body', 'blog_id', 'date_added'])
 'SELECT "blogs_blogpost"."id", "blogs_blogpost"."title", "blogs_blogpost"."body", "blogs_blogpost"."blog_id", "blogs_blogpost"."date_added" FROM "blogs_blogpost" WHERE "blogs_blogpost"."blog_id" = 2 ORDER BY "blogs_blogpost"."date_added" DESC LIMIT 5'
 
 ```
+
+
+export DJANGO_SUPERUSER_PASSWORD=fake_pw
