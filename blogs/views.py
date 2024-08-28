@@ -1,5 +1,7 @@
-from django.shortcuts import render
+from django.shortcuts import render, redirect
 from .models import Blog, BlogPost
+from .forms import BlogForm
+from django.contrib.auth.decorators import login_required
 
 def index(request):
     return render(request, "blogs/index.html")
@@ -12,6 +14,13 @@ def blogs(request):
     # When we used the render() function to generate the home page, all the information it needed was already in the template files.
     return render(request, "blogs/blogs.html", context)
 
+@login_required
+def meus_blogs(request):
+    meus_blogs = Blog.objects.filter(owner=request.user)
+    # Real-world view functions are almost always more complex than what you see here, and they can pass as much information as needed to render().
+    context = {"blogs": meus_blogs}
+    # When we used the render() function to generate the home page, all the information it needed was already in the template files.
+    return render(request, "blogs/blogs.html", context)
 def blog(request, blog_id):
     blog = Blog.objects.get(id=blog_id)
     posts = blog.blogpost_set.all()
@@ -31,3 +40,18 @@ def post(request, post_id):
         "blog": blog,
     }
     return render(request, "blogs/post.html", context)
+
+@login_required
+def new_blog(request):
+    if request.method != "POST":
+        form = BlogForm()
+    else:
+        form = BlogForm(data=request.POST)
+        if form.is_valid():
+            new_blog = form.save(commit=False)
+            new_blog.owner = request.user
+            new_blog.save()
+            return redirect("blogs:blogs")
+
+    context = {"form": form}
+    return render(request, "blogs/new_blog.html", context)
