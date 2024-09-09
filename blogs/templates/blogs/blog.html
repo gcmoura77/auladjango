@@ -20,4 +20,9 @@
     <h3>Nenhum artigo foi postado ainda para este blog.</h3>
   {% endfor %}
 
+  {% if request.user == blog.owner %}
+  <a class="button primary"
+    href="{% url 'blogs:new_post' blog.id %}">Nova postagem</a>
+  {% endif %}
+
 {% endblock content %}

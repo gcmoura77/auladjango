@@ -1,6 +1,6 @@
 from django import forms
 
-from .models import Blog
+from .models import Blog, BlogPost
 
 class BlogForm(forms.ModelForm):
     class Meta:
@@ -8,3 +8,8 @@ class BlogForm(forms.ModelForm):
         fields = ["title", "description"]
         labels = {"title": "Título",
                   "description":"Descrição",}
+        
+class BlogPostForm(forms.ModelForm):
+    class Meta:
+        model = BlogPost
+        fields = ["title", "body"]
