@@ -82,8 +82,30 @@ dict_keys(['_state', 'id', 'title', 'body', 'blog_id', 'date_added'])
 
 export DJANGO_SUPERUSER_PASSWORD=fake_pw
 
-# Para rodar o servidor: python manage.py runserver
-# PAra criar superusuário: python manage.py createsuperuser
-# Para criar os arquivos de migração  'python manage.py makemigrations blogs'
-# Para aplicar a migração gerada com o makemigrations 'python manage.py migrate'
-# Usuário e Senha: gcmoura / 123456
+- Para rodar o servidor: python manage.py runserver
+- Para criar superusuário: python manage.py createsuperuser
+- Para criar os arquivos de migração  'python manage.py makemigrations blogs'
+- Para aplicar a migração gerada com o makemigrations 'python manage.py migrate'
+- Usuário e Senha: gcmoura / 123456
+
+# Para o deploy
+
+- exemplo usando Fly.io
+- utilizado django-simple-deploy
+
+## Passos necessários
+
+- Install the host platform's CLI.
+- Install django-simple-deploy.
+- Add simple_deploy to INSTALLED_APPS.
+- Create a project on the host platform.
+- Run the simple_deploy command to configure the project for a specific host.
+- Review the changes that were made, and commit those changes.
+- Push the project to the remote server.
+- Open the deployed project in a browser tab.
+
+Fly.io:
+export FLYCTL_INSTALL="/home/gcmoura/.fly"
+export PATH="$FLYCTL_INSTALL/bin:$PATH"
+
+$ fly auth login
