@@ -81,3 +81,9 @@ dict_keys(['_state', 'id', 'title', 'body', 'blog_id', 'date_added'])
 
 
 export DJANGO_SUPERUSER_PASSWORD=fake_pw
+
+# Para rodar o servidor: python manage.py runserver
+# PAra criar superusuário: python manage.py createsuperuser
+# Para criar os arquivos de migração  'python manage.py makemigrations blogs'
+# Para aplicar a migração gerada com o makemigrations 'python manage.py migrate'
+# Usuário e Senha: gcmoura / 123456
