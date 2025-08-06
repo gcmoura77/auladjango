@@ -116,4 +116,5 @@ fly apps create --generate-name
 ```automatically selected personal organization: gcmoura@gmail.com
 New app created: sparkling-pine-8996```
 
-python manage.py simple_deploy --platform fly_io
+pip install django-simple-deploy[fly_io]
+python manage.py deploy
