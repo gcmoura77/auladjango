@@ -1,0 +1,25 @@
+2025-08-06 09:02:52,759 INFO: Logging run of `manage.py deploy`...
+2025-08-06 09:02:52,759 INFO: Created /home/gcmoura/blogmaker_project/dsd_logs/dsd_2025-08-06-090252.log.
+2025-08-06 09:02:52,759 INFO: 
+2025-08-06 09:02:52,759 INFO: CLI args:
+2025-08-06 09:02:52,759 INFO:   verbosity: 1
+2025-08-06 09:02:52,759 INFO:   settings: None
+2025-08-06 09:02:52,759 INFO:   pythonpath: None
+2025-08-06 09:02:52,759 INFO:   traceback: False
+2025-08-06 09:02:52,759 INFO:   no_color: False
+2025-08-06 09:02:52,759 INFO:   force_color: False
+2025-08-06 09:02:52,759 INFO:   automate_all: False
+2025-08-06 09:02:52,759 INFO:   no_logging: False
+2025-08-06 09:02:52,759 INFO:   ignore_unclean_git: False
+2025-08-06 09:02:52,759 INFO:   deployed_project_name: 
+2025-08-06 09:02:52,759 INFO:   region: us-3.platform.sh
+2025-08-06 09:02:52,759 INFO:   unit_testing: False
+2025-08-06 09:02:52,759 INFO:   e2e_testing: False
+2025-08-06 09:02:52,779 INFO: 
+2025-08-06 09:02:52,779 INFO: DSDCommandError:
+2025-08-06 09:02:52,779 INFO: Could not find any plugins. Officially-supported plugins are:
+2025-08-06 09:02:52,779 INFO:   dsd-flyio dsd-platformsh dsd-heroku
+2025-08-06 09:02:52,779 INFO: You can install any of these with pip:
+2025-08-06 09:02:52,779 INFO:   $ pip install dsd-flyio
+2025-08-06 09:02:52,779 INFO: Please install the plugin for the platform you want to deploy to,
+2025-08-06 09:02:52,779 INFO: and then run the deploy command again.

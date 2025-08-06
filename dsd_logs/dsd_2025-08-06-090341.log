@@ -1,0 +1,75 @@
+2025-08-06 09:03:41,185 INFO: Logging run of `manage.py deploy`...
+2025-08-06 09:03:41,185 INFO: Created /home/gcmoura/blogmaker_project/dsd_logs/dsd_2025-08-06-090341.log.
+2025-08-06 09:03:41,185 INFO: 
+2025-08-06 09:03:41,185 INFO: CLI args:
+2025-08-06 09:03:41,185 INFO:   verbosity: 1
+2025-08-06 09:03:41,185 INFO:   settings: None
+2025-08-06 09:03:41,185 INFO:   pythonpath: None
+2025-08-06 09:03:41,185 INFO:   traceback: False
+2025-08-06 09:03:41,185 INFO:   no_color: False
+2025-08-06 09:03:41,185 INFO:   force_color: False
+2025-08-06 09:03:41,185 INFO:   automate_all: False
+2025-08-06 09:03:41,185 INFO:   no_logging: False
+2025-08-06 09:03:41,185 INFO:   ignore_unclean_git: False
+2025-08-06 09:03:41,185 INFO:   deployed_project_name: 
+2025-08-06 09:03:41,185 INFO:   region: us-3.platform.sh
+2025-08-06 09:03:41,185 INFO:   unit_testing: False
+2025-08-06 09:03:41,185 INFO:   e2e_testing: False
+2025-08-06 09:03:41,190 INFO:   Using plugin: dsd_flyio
+2025-08-06 09:03:41,272 INFO: 
+2025-08-06 09:03:41,272 INFO: Deployment target: Fly.io
+2025-08-06 09:03:41,272 INFO: Local project name: blogmaker_lite
+2025-08-06 09:03:41,272 INFO: Project root: /home/gcmoura/blogmaker_project
+2025-08-06 09:03:41,272 INFO: Found .git dir at /home/gcmoura/blogmaker_project.
+2025-08-06 09:03:41,272 INFO: 
+2025-08-06 09:03:41,273 INFO: git status --porcelain
+2025-08-06 09:03:41,278 INFO:  M README.md
+2025-08-06 09:03:41,278 INFO:  M blogmaker_lite/__pycache__/settings.cpython-310.pyc
+2025-08-06 09:03:41,278 INFO:  M blogmaker_lite/db.sqlite3
+2025-08-06 09:03:41,278 INFO:  M blogmaker_lite/settings.py
+2025-08-06 09:03:41,278 INFO: ?? dsd_logs/
+2025-08-06 09:03:41,278 INFO: 
+2025-08-06 09:03:41,278 INFO: git diff --unified=0
+2025-08-06 09:03:41,291 INFO: diff --git a/README.md b/README.md
+2025-08-06 09:03:41,291 INFO: index 7a9bec8..93bb45e 100644
+2025-08-06 09:03:41,291 INFO: --- a/README.md
+2025-08-06 09:03:41,291 INFO: +++ b/README.md
+2025-08-06 09:03:41,291 INFO: @@ -107 +107 @@ export DJANGO_SUPERUSER_PASSWORD=fake_pw
+2025-08-06 09:03:41,291 INFO: -Fly.io:
+2025-08-06 09:03:41,291 INFO: +# Fly.io:
+2025-08-06 09:03:41,291 INFO: @@ -111,0 +112,8 @@ $ fly auth login
+2025-08-06 09:03:41,291 INFO: +
+2025-08-06 09:03:41,291 INFO: +## Criar um projeto com nome aleatório:
+2025-08-06 09:03:41,291 INFO: +fly apps create --generate-name
+2025-08-06 09:03:41,291 INFO: +
+2025-08-06 09:03:41,291 INFO: +```automatically selected personal organization: gcmoura@gmail.com
+2025-08-06 09:03:41,291 INFO: +New app created: sparkling-pine-8996```
+2025-08-06 09:03:41,291 INFO: +
+2025-08-06 09:03:41,291 INFO: +python manage.py simple_deploy --platform fly_io
+2025-08-06 09:03:41,291 INFO: \ No newline at end of file
+2025-08-06 09:03:41,291 INFO: diff --git a/blogmaker_lite/__pycache__/settings.cpython-310.pyc b/blogmaker_lite/__pycache__/settings.cpython-310.pyc
+2025-08-06 09:03:41,291 INFO: index 6b14ad8..79ddaf7 100644
+2025-08-06 09:03:41,291 INFO: Binary files a/blogmaker_lite/__pycache__/settings.cpython-310.pyc and b/blogmaker_lite/__pycache__/settings.cpython-310.pyc differ
+2025-08-06 09:03:41,291 INFO: diff --git a/blogmaker_lite/db.sqlite3 b/blogmaker_lite/db.sqlite3
+2025-08-06 09:03:41,291 INFO: index 2b3f47f..889090d 100644
+2025-08-06 09:03:41,291 INFO: Binary files a/blogmaker_lite/db.sqlite3 and b/blogmaker_lite/db.sqlite3 differ
+2025-08-06 09:03:41,291 INFO: diff --git a/blogmaker_lite/settings.py b/blogmaker_lite/settings.py
+2025-08-06 09:03:41,291 INFO: index a1f6d34..10cbd53 100644
+2025-08-06 09:03:41,291 INFO: --- a/blogmaker_lite/settings.py
+2025-08-06 09:03:41,291 INFO: +++ b/blogmaker_lite/settings.py
+2025-08-06 09:03:41,291 INFO: @@ -31 +31 @@ INSTALLED_APPS=["blogs",
+2025-08-06 09:03:41,291 INFO: -                "simple_deploy",
+2025-08-06 09:03:41,291 INFO: +                "django_simple_deploy",
+2025-08-06 09:03:41,291 INFO: 
+2025-08-06 09:03:41,291 INFO: 
+2025-08-06 09:03:41,291 INFO: DSDCommandError:
+2025-08-06 09:03:41,291 INFO: 
+2025-08-06 09:03:41,291 INFO: The output of `git status` indicates that you have uncommitted changes.
+2025-08-06 09:03:41,291 INFO: 
+2025-08-06 09:03:41,291 INFO: We highly recommend you commit all changes before running the deploy command,
+2025-08-06 09:03:41,291 INFO: so you can easily undo configuration changes if deployment doesn't work, or if
+2025-08-06 09:03:41,291 INFO: you wish to deploy to a different platform.
+2025-08-06 09:03:41,291 INFO: 
+2025-08-06 09:03:41,291 INFO: Please commit all changes and then run the deploy command again. If you really
+2025-08-06 09:03:41,291 INFO: wish to continue without committing current changes, you can use
+2025-08-06 09:03:41,291 INFO: the --ignore-unclean-git flag.

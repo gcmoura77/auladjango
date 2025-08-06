@@ -104,8 +104,16 @@ export DJANGO_SUPERUSER_PASSWORD=fake_pw
 - Push the project to the remote server.
 - Open the deployed project in a browser tab.
 
-Fly.io:
+# Fly.io:
 export FLYCTL_INSTALL="/home/gcmoura/.fly"
 export PATH="$FLYCTL_INSTALL/bin:$PATH"
 
 $ fly auth login
+
+## Criar um projeto com nome aleatório:
+fly apps create --generate-name
+
+```automatically selected personal organization: gcmoura@gmail.com
+New app created: sparkling-pine-8996```
+
+python manage.py simple_deploy --platform fly_io
